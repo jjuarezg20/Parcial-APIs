@@ -11,7 +11,8 @@ import { UsersModule } from '../users/users.module';
     UsersModule,
     PassportModule,
     JwtModule.register({
-      secret: 'jwt_secret_key',
+      // Fallback for local dev only — never use this in production; set JWT_SECRET in .env
+      secret: process.env.JWT_SECRET || 'dev-only-change-me',
       signOptions: { expiresIn: '1h' },
     }),
   ],
