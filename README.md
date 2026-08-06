@@ -23,7 +23,7 @@ Freelancers need a simple backend to publish the services they offer and let cli
 - **Language:** TypeScript
 - **ORM:** TypeORM 0.3
 - **Database:** PostgreSQL 15
-- **Auth:** `@nestjs/jwt`, Passport (`passport-jwt`)
+- **Auth:** `@nestjs/jwt`, Passport (`passport-jwt`), bcrypt (password hashing)
 - **Docs:** `@nestjs/swagger`
 - **Containerization:** Docker Compose (PostgreSQL)
 
@@ -128,7 +128,6 @@ Use the returned token as `Authorization: Bearer <token>` to call `POST /service
 
 ## Future improvements
 
-- Hash user passwords with bcrypt instead of storing plain text.
 - Move the JWT secret and DB credentials fully to environment variables.
 - Add unit and e2e tests (Jest + Supertest).
 - Add pagination and filtering to the public services endpoint.
